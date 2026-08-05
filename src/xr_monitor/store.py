@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from xr_monitor.models import Snapshot, SourceStatus
+from xr_monitor.models import Snapshot, SourceStatus, UpdateRecord
 
 
 class JsonStore:
@@ -43,3 +43,29 @@ class JsonStore:
         path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(event, ensure_ascii=False) + "\n")
+
+    def record_exists(self, record_id: str) -> bool:
+        return (self.data_dir / "records" / f"{record_id}.json").exists()
+
+    def save_record(self, record: UpdateRecord) -> None:
+        path = self.data_dir / "records" / f"{record.id}.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(record.model_dump_json(indent=2), encoding="utf-8")
+
+    def list_records(self) -> list[UpdateRecord]:
+        directory = self.data_dir / "records"
+        if not directory.exists():
+            return []
+        return [
+            UpdateRecord.model_validate_json(path.read_text(encoding="utf-8"))
+            for path in sorted(directory.glob("*.json"), reverse=True)
+        ]
+
+    def list_statuses(self) -> list[SourceStatus]:
+        directory = self.data_dir / "source-status"
+        if not directory.exists():
+            return []
+        return [
+            SourceStatus.model_validate_json(path.read_text(encoding="utf-8"))
+            for path in sorted(directory.glob("*.json"))
+        ]

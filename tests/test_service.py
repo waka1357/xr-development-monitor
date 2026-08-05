@@ -50,9 +50,11 @@ def source() -> Source:
 def test_initial_then_unchanged_then_changed(tmp_path: Path) -> None:
     store = JsonStore(tmp_path)
     assert collect_source(source(), FixtureCollector("version 1"), store) == "initial"
+    assert len(store.list_records()) == 1
     assert collect_source(source(), FixtureCollector("version 1"), store) == "unchanged"
     assert diff_source(source(), FixtureCollector("version 2"), store) == "changed"
     assert collect_source(source(), FixtureCollector("version 2"), store) == "changed"
+    assert len(store.list_records()) == 2
 
 
 def test_failure_keeps_previous_snapshot_and_records_status(tmp_path: Path) -> None:

@@ -41,3 +41,18 @@ uv run python -m xr_monitor diff --source unity_editor_release_notes
 GitHub Actionsの `collect-daily` は毎日 09:00 JST（00:00 UTC）に実行されます。Snapshotと
 Source Healthに変更があった場合だけ、`data: collect updates YYYY-MM-DD` というコミットを作成します。
 取得ログは肥大化を避け、Gitへは保存しません。
+
+## 静的サイト
+
+更新レコード、公式本文、システム判定、Source Healthを静的HTMLに出力します。
+
+```powershell
+uv run python -m xr_monitor build-site
+```
+
+生成先は `site/index.html` です。`Deploy static site` ワークフローは `main` へのpush時に
+GitHub Pagesへデプロイします。初回のみリポジトリの **Settings → Pages** で、Sourceを
+**GitHub Actions** に設定してください。
+
+システム判定はキーワード規則にもとづく補助情報であり、公式発表ではありません。根拠が弱い場合は
+`documentation / info` として表示します。
