@@ -11,6 +11,7 @@ HealthState = Literal["ok", "unconfigured", "fetch_failed", "parser_broken"]
 AccessStatus = Literal["verified_allowed", "requires_permission", "unverified"]
 RecordKind = Literal["initial", "changed"]
 Severity = Literal["critical", "high", "medium", "low", "info"]
+ImpactLevel = Literal["confirmed", "likely", "review", "unknown"]
 
 
 class Source(BaseModel):
@@ -51,6 +52,20 @@ class SystemAssessment(BaseModel):
     reason: str
 
 
+class UserProfile(BaseModel):
+    """Local development environment configuration, never an official source."""
+
+    name: str
+    active_unity_versions: list[str] = Field(default_factory=list)
+
+
+class EnvironmentImpact(BaseModel):
+    """Comparison between a source release target and the configured user environment."""
+
+    level: ImpactLevel
+    reason: str
+
+
 class UpdateRecord(BaseModel):
     id: str = Field(pattern=r"^[a-z0-9_-]+$")
     kind: RecordKind
@@ -61,3 +76,8 @@ class UpdateRecord(BaseModel):
     content_hash: str = Field(pattern=r"^[a-f0-9]{64}$")
     official_content: str
     system_assessment: SystemAssessment
+    environment_impact: EnvironmentImpact = Field(
+        default_factory=lambda: EnvironmentImpact(
+            level="unknown", reason="No environment comparison was recorded for this update."
+        )
+    )

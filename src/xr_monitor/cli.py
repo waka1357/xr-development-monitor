@@ -4,7 +4,7 @@ import argparse
 from pathlib import Path
 
 from xr_monitor.collector import CollectionError, HtmlCollector
-from xr_monitor.config import load_sources
+from xr_monitor.config import load_sources, load_user_profile
 from xr_monitor.discovery import discover_unity_6_release_urls, release_source
 from xr_monitor.service import collect_source, diff_source
 from xr_monitor.site import build_site
@@ -31,6 +31,7 @@ def main() -> None:
     args = parser.parse_args()
     root = _project_root()
     sources = load_sources(root / "config" / "sources.yml")
+    profile = load_user_profile(root / "config" / "user-profile.yml")
     if args.command == "build-site":
         print(f"Built site: {build_site(root)}")
         return
@@ -59,7 +60,8 @@ def main() -> None:
         collector = HtmlCollector()
         for url in new:
             discovered_source = release_source(source, url)
-            print(f"{discovered_source.id}: {collect_source(discovered_source, collector, store)}")
+            result = collect_source(discovered_source, collector, store, profile)
+            print(f"{discovered_source.id}: {result}")
         print(f"discovered={len(current)} collected={len(new)}")
         return
     if args.source:
@@ -74,7 +76,7 @@ def main() -> None:
     for source in selected:
         try:
             if args.command == "collect":
-                result = collect_source(source, collector, store)
+                result = collect_source(source, collector, store, profile)
             else:
                 result = diff_source(source, collector, store)
             print(f"{source.id}: {result}")

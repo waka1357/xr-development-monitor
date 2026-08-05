@@ -8,21 +8,23 @@
     body { max-width: 960px; margin: 2rem auto; padding: 0 1rem; font: 16px/1.6 system-ui, sans-serif; color: #172033; background: #f7f9fc; }
     header, article, section { background: white; padding: 1.25rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 1px 3px #1720331a; }
     .meta { color: #596579; font-size: .9rem; } .badge { display: inline-block; padding: .1rem .5rem; border-radius: 1rem; background: #e7eefb; margin-right: .4rem; }
-    .high, .critical { background: #ffe0e0; } .medium { background: #fff0c9; } .low { background: #e4f4e5; }
+    .high, .critical, .review { background: #ffe0e0; } .medium, .likely { background: #fff0c9; } .low, .confirmed { background: #e4f4e5; }
     input { width: 100%; box-sizing: border-box; padding: .6rem; margin: .5rem 0 1rem; } pre { white-space: pre-wrap; }
   </style>
 </head>
 <body>
   <header><h1>XR Development Monitor</h1><p>公式情報とシステム判定を区別して表示します。</p></header>
+  {% if profile %}<section><h2>Configured environment</h2><p>{{ profile.name }}: active Unity Editor {{ profile.active_unity_versions | join(', ') }}</p></section>{% endif %}
   <section><h2>Source Health</h2>
     {% for status in statuses %}<p><strong>{{ status.source_id }}</strong>: {{ status.state }} <span class="meta">{{ status.checked_at }}</span>{% if status.message %} — {{ status.message }}{% endif %}</p>{% else %}<p>Source status is not available yet.</p>{% endfor %}
   </section>
   <section><h2>更新履歴</h2><input id="search" placeholder="検索（ソース名・本文・カテゴリ）">
   <div id="records">{% for record in records %}
-    <article data-search="{{ record.source_name }} {{ record.official_content }} {{ record.assessment.categories | join(' ') }}">
+    <article data-search="{{ record.source_name }} {{ record.official_content }} {{ record.assessment.categories | join(' ') }} {{ record.impact.level }}">
       <span class="badge {{ record.assessment.severity }}">{{ record.assessment.severity }}</span><span class="badge">{{ record.kind }}</span>
       <h3><a href="updates/{{ record.id }}.html">{{ record.source_name }}</a></h3><p class="meta">検知: {{ record.detected_at }} · <a href="{{ record.source_url }}">公式ソース</a></p>
       <p>{{ record.official_content }}</p><p class="meta">システム判定: {{ record.assessment.categories | join(', ') }} — {{ record.assessment.reason }}</p>
+      <p class="meta"><span class="badge {{ record.impact.level }}">environment: {{ record.impact.level }}</span>{{ record.impact.reason }}</p>
     </article>{% else %}<p>まだ更新レコードはありません。次回の収集でベースラインまたは変更が保存されます。</p>{% endfor %}
   </div></section>
   <script>document.querySelector('#search').addEventListener('input', e => document.querySelectorAll('[data-search]').forEach(x => x.hidden = !x.dataset.search.toLowerCase().includes(e.target.value.toLowerCase())));</script>
