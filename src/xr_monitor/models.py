@@ -30,7 +30,8 @@ class Snapshot(BaseModel):
     fetched_at: datetime
     url: AnyHttpUrl
     content_hash: str = Field(pattern=r"^[a-f0-9]{64}$")
-    normalized_content: str
+    content_excerpt: str = ""
+    normalized_content: str = Field(default="", exclude=True)
 
 
 class SourceStatus(BaseModel):

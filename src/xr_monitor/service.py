@@ -47,7 +47,7 @@ def collect_source(source: Source, collector: Collector, store: JsonStore) -> st
             detected_at=snapshot.fetched_at,
             source_url=snapshot.url,
             content_hash=snapshot.content_hash,
-            official_content=snapshot.normalized_content,
+            official_content=snapshot.content_excerpt,
             system_assessment=classify(snapshot.normalized_content),
         )
         store.save_record(record)

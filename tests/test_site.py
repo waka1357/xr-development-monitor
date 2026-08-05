@@ -17,6 +17,7 @@ class FixtureCollector(Collector):
             fetched_at=datetime.now(UTC),
             url="https://example.com/release-notes",
             content_hash=content_hash(content),
+            content_excerpt=content,
             normalized_content=content,
         )
 
