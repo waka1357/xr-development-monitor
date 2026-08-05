@@ -4,12 +4,15 @@ from datetime import UTC, datetime
 
 from xr_monitor.classifier import classify
 from xr_monitor.collector import CollectionError, Collector, ParserError
-from xr_monitor.models import HealthState, Source, SourceStatus, UpdateRecord
+from xr_monitor.impact import assess_environment_impact
+from xr_monitor.models import HealthState, Source, SourceStatus, UpdateRecord, UserProfile
 from xr_monitor.relevance import extract_xr_relevant_excerpt
 from xr_monitor.store import JsonStore
 
 
-def collect_source(source: Source, collector: Collector, store: JsonStore) -> str:
+def collect_source(
+    source: Source, collector: Collector, store: JsonStore, profile: UserProfile | None = None
+) -> str:
     try:
         snapshot = collector.collect(source)
     except CollectionError as error:
@@ -50,6 +53,7 @@ def collect_source(source: Source, collector: Collector, store: JsonStore) -> st
             content_hash=snapshot.content_hash,
             official_content=extract_xr_relevant_excerpt(snapshot.normalized_content),
             system_assessment=classify(snapshot.normalized_content),
+            environment_impact=assess_environment_impact(source, profile),
         )
         store.save_record(record)
         store.save_status(

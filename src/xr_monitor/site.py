@@ -5,6 +5,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from xr_monitor.config import load_user_profile
 from xr_monitor.models import UpdateRecord
 from xr_monitor.store import JsonStore
 
@@ -23,6 +24,7 @@ def _record_view(record: UpdateRecord) -> dict[str, object]:
         "source_url": str(record.source_url),
         "official_content": _excerpt(record.official_content),
         "assessment": record.system_assessment.model_dump(),
+        "impact": record.environment_impact.model_dump(),
     }
 
 
@@ -36,7 +38,9 @@ def build_site(project_root: Path) -> Path:
     environment = Environment(
         loader=FileSystemLoader(project_root / "templates"), autoescape=select_autoescape(["html"])
     )
-    context = {"records": records, "statuses": statuses}
+    profile_path = project_root / "config" / "user-profile.yml"
+    profile = load_user_profile(profile_path) if profile_path.exists() else None
+    context = {"records": records, "statuses": statuses, "profile": profile}
     (output / "index.html").write_text(
         environment.get_template("index.html").render(**context), encoding="utf-8"
     )
