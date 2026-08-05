@@ -39,6 +39,10 @@ class HtmlCollector(Collector):
             raise ParserError("selector returned only empty content")
         return normalized
 
+    @staticmethod
+    def excerpt(content: str, limit: int = 1_500) -> str:
+        return content if len(content) <= limit else f"{content[:limit].rstrip()}…"
+
     def collect(self, source: Source) -> Snapshot:
         if source.access_status != "verified_allowed":
             raise CollectionError(f"source is not permitted for automated collection: {source.id}")
@@ -60,5 +64,6 @@ class HtmlCollector(Collector):
             fetched_at=datetime.now(UTC),
             url=source.url,
             content_hash=content_hash(content),
+            content_excerpt=self.excerpt(content),
             normalized_content=content,
         )

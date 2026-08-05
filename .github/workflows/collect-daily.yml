@@ -25,12 +25,12 @@ jobs:
       - run: uv run python -m xr_monitor collect --schedule daily
       - name: Commit updated monitoring data
         run: |
-          if git diff --quiet -- data/snapshots data/source-status; then
+          if git diff --quiet -- data/records data/snapshots data/source-status; then
             echo "No monitoring-data changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/snapshots data/source-status
+          git add data/records data/snapshots data/source-status
           git commit -m "data: collect updates $(date -u +%F)"
           git push
