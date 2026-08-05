@@ -1,0 +1,14 @@
+.venv/
+.uv-cache/
+.uv-python/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+data/snapshots/*.json
+data/source-status/*.json
+data/logs/*.jsonl
+!data/snapshots/.gitkeep
+!data/source-status/.gitkeep
+!data/logs/.gitkeep

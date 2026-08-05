@@ -1,0 +1,14 @@
+profile:
+  name: default
+  target_devices:
+    - name: Meta Quest 3
+      os_version: unknown
+  unity_editors:
+    - version: 6000.4.3f1
+      status: active
+    - version: 6000.3.18f1
+      status: active
+    - version: 6000.0.45f1
+      status: legacy
+  preferred_runtime:
+    - OpenXR
