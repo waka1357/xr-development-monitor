@@ -22,7 +22,7 @@ jobs:
           ref: main
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --group dev
-      - run: uv run python -m xr_monitor discover --source unity_editor_release_notes
+      - run: uv run python -m xr_monitor collect-new --source unity_editor_release_notes
       - run: uv run python -m xr_monitor collect --schedule daily
       - name: Commit updated monitoring data
         run: |
