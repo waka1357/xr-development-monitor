@@ -23,3 +23,16 @@ def discover_unity_6_release_urls(source: Source) -> list[str]:
     except httpx.HTTPError as error:
         raise CollectionError(f"discovery request failed: {error}") from error
     return list(dict.fromkeys(match.group(0) for match in RELEASE_URL.finditer(response.text)))
+
+
+def release_source(source: Source, url: str) -> Source:
+    version = url.rsplit("/", maxsplit=1)[-1]
+    return source.model_copy(
+        update={
+            "id": f"{source.id}_{version.replace('.', '_')}",
+            "name": f"{source.name} {version}",
+            "url": url,
+            "discovery_url": None,
+            "enabled": True,
+        }
+    )
