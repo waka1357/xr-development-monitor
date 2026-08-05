@@ -19,6 +19,7 @@ class Source(BaseModel):
     tier: SourceTier
     kind: SourceKind
     url: AnyHttpUrl | None = None
+    discovery_url: AnyHttpUrl | None = None
     content_selector: str
     access_status: AccessStatus = "unverified"
     enabled: bool = False

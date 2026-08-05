@@ -42,6 +42,9 @@ GitHub Actionsの `collect-daily` は毎日 09:00 JST（00:00 UTC）に実行さ
 Source Healthに変更があった場合だけ、`data: collect updates YYYY-MM-DD` というコミットを作成します。
 取得ログは肥大化を避け、Gitへは保存しません。
 
+日次収集の前にUnity公式サイトマップを確認し、Unity 6の新しいリリースノートURLを検出します。現在は
+検出したURL一覧を保持する段階であり、個別リリースノートの自動収集は次の段階で追加します。
+
 ## 静的サイト
 
 更新レコード、公式本文、システム判定、Source Healthを静的HTMLに出力します。

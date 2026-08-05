@@ -74,3 +74,17 @@ class JsonStore:
             SourceStatus.model_validate_json(path.read_text(encoding="utf-8"))
             for path in sorted(directory.glob("*.json"))
         ]
+
+    def read_index(self, name: str) -> list[str]:
+        path = self.data_dir / "indexes" / f"{name}.json"
+        if not path.exists():
+            return []
+        values = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(values, list) or not all(isinstance(value, str) for value in values):
+            raise ValueError(f"index is not a string list: {name}")
+        return values
+
+    def save_index(self, name: str, values: list[str]) -> None:
+        path = self.data_dir / "indexes" / f"{name}.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        self._write_json(path, json.dumps(values, ensure_ascii=False, indent=2))
