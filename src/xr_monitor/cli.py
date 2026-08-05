@@ -5,6 +5,7 @@ from pathlib import Path
 
 from xr_monitor.collector import CollectionError, HtmlCollector
 from xr_monitor.config import load_sources
+from xr_monitor.discovery import discover_unity_6_release_urls
 from xr_monitor.service import collect_source, diff_source
 from xr_monitor.site import build_site
 from xr_monitor.store import JsonStore
@@ -23,12 +24,27 @@ def main() -> None:
         scope.add_argument("--source")
         scope.add_argument("--schedule", choices=["daily"])
     subparsers.add_parser("build-site")
+    discover_parser = subparsers.add_parser("discover")
+    discover_parser.add_argument("--source", required=True)
     args = parser.parse_args()
     root = _project_root()
+    sources = load_sources(root / "config" / "sources.yml")
     if args.command == "build-site":
         print(f"Built site: {build_site(root)}")
         return
-    sources = load_sources(root / "config" / "sources.yml")
+    if args.command == "discover":
+        if args.source not in sources:
+            parser.error(f"unknown source: {args.source}")
+        source = sources[args.source]
+        store = JsonStore(root / "data")
+        current = discover_unity_6_release_urls(source)
+        previous = store.read_index(source.id)
+        new = [url for url in current if url not in previous]
+        store.save_index(source.id, current)
+        for url in new:
+            print(f"new: {url}")
+        print(f"discovered={len(current)} new={len(new)}")
+        return
     if args.source:
         if args.source not in sources:
             parser.error(f"unknown source: {args.source}")
