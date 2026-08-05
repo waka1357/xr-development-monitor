@@ -1,0 +1,36 @@
+name: Collect daily updates
+
+on:
+  schedule:
+    # GitHub Actions cron is UTC: 09:00 JST
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: xr-monitor-collector
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --group dev
+      - run: uv run python -m xr_monitor collect --schedule daily
+      - name: Commit updated monitoring data
+        run: |
+          if git diff --quiet -- data/snapshots data/source-status; then
+            echo "No monitoring-data changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots data/source-status
+          git commit -m "data: collect updates $(date -u +%F)"
+          git push

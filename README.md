@@ -35,3 +35,9 @@ uv run python -m xr_monitor diff --source unity_editor_release_notes
 
 `--schedule daily` は有効なソースだけを収集します。未有効化のソースを個別に指定した場合は、
 明確にエラーで終了します。取得・解析に失敗した場合、既存のスナップショットは変更しません。
+
+## 日次収集
+
+GitHub Actionsの `collect-daily` は毎日 09:00 JST（00:00 UTC）に実行されます。Snapshotと
+Source Healthに変更があった場合だけ、`data: collect updates YYYY-MM-DD` というコミットを作成します。
+取得ログは肥大化を避け、Gitへは保存しません。
