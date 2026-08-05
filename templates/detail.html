@@ -1,0 +1,5 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{{ record.source_name }}</title><style>body{max-width:960px;margin:2rem auto;padding:0 1rem;font:16px/1.6 system-ui,sans-serif}pre{white-space:pre-wrap;background:#f5f7fa;padding:1rem;border-radius:8px}</style></head><body>
+<p><a href="../index.html">← 更新履歴</a></p><h1>{{ record.source_name }}</h1><p>検知: {{ record.detected_at }} · <a href="{{ record.source_url }}">公式ソース</a></p>
+<h2>公式情報（収集本文）</h2><pre>{{ record.official_content }}</pre>
+<h2>システム判定（公式発表ではありません）</h2><p>カテゴリ: {{ record.assessment.categories | join(', ') }}<br>重要度: {{ record.assessment.severity }}<br>根拠: {{ record.assessment.reason }}</p>
+</body></html>

@@ -6,6 +6,7 @@ from pathlib import Path
 from xr_monitor.collector import CollectionError, HtmlCollector
 from xr_monitor.config import load_sources
 from xr_monitor.service import collect_source, diff_source
+from xr_monitor.site import build_site
 from xr_monitor.store import JsonStore
 
 
@@ -21,8 +22,12 @@ def main() -> None:
         scope = sub.add_mutually_exclusive_group(required=True)
         scope.add_argument("--source")
         scope.add_argument("--schedule", choices=["daily"])
+    subparsers.add_parser("build-site")
     args = parser.parse_args()
     root = _project_root()
+    if args.command == "build-site":
+        print(f"Built site: {build_site(root)}")
+        return
     sources = load_sources(root / "config" / "sources.yml")
     if args.source:
         if args.source not in sources:
