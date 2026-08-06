@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_5_7f1-ac723c45c1fe",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_5_7f1",
+  "source_name": "Unity Editor Release Notes 6000.5.7f1",
+  "detected_at": "2026-08-06T02:36:06.295072Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.5.7f1",
+  "content_hash": "ac723c45c1fe954faaf2ec8e2eef0853ac42a427b91f4a3fe9776970f5f04304",
+  "official_content": "Unity 6000.5.7f1 Released on Aug 5, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … 8 ) Package changes in 6000.5.7f1 Packages updated com.unity.burst: 1.8.29 to 1.8.30 com.unity.collab-proxy: 2.13.3 to 2.13.5 com.unity.visualscripting: 1.9.11 to 1.9.12 com.unity.xr.hands: 1.8.0 to 1.8.1 com.unity.xr.meta-openxr: 2.5.0 to 2.5.1 com.unity.netcode.gameobjects: 2.13.0 to 2.13.1 com.unity.services.multiplayer: 2.2.4 to 2.3.0 Changeset Changeset: 017862109af",
+  "system_assessment": {
+    "categories": [
+      "documentation"
+    ],
+    "severity": "info",
+    "reason": "No Phase 2 rule keyword matched."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}
