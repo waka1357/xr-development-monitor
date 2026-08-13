@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_5_8f1-31b13dfc1a92",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_5_8f1",
+  "source_name": "Unity Editor Release Notes 6000.5.8f1",
+  "detected_at": "2026-08-13T02:01:15.476504Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.5.8f1",
+  "content_hash": "31b13dfc1a92598dfc2688ec881a63f59d6a10b8910dd36c0dbda51e623213d9",
+  "official_content": "Unity 6000.5.8f1 Released on Aug 12, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … e notes Known Issues in 6000.5.8f1 6000.0.11f1: Crash on _platform_memcmp when baking lighting in a Scene stored in the StreamingAssets folder ( UUM-149240 ) 6000.3.0a1: Crash on PVRAtlassingData::Build and memory leak when switching Lighting Visualization overlay to \"Preview\" ( UUM-149471 ) 6000.4.0a2: Windows Player silently crashes when using Application.Quit() after",
+  "system_assessment": {
+    "categories": [
+      "documentation"
+    ],
+    "severity": "info",
+    "reason": "No Phase 2 rule keyword matched."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}
