@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_3_22f1-36e3a11bfd7c",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_3_22f1",
+  "source_name": "Unity Editor Release Notes 6000.3.22f1",
+  "detected_at": "2026-08-14T01:58:39.729644Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.3.22f1",
+  "content_hash": "36e3a11bfd7c24aa95fd3155db4f34e6e0c53830b776426949ab9fa25b104203",
+  "official_content": "Unity 6000.3.22f1 Released on Aug 13, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … notes Known Issues in 6000.3.22f1 6000.0.11f1: Crash on _platform_memcmp when baking lighting in a Scene stored in the StreamingAssets folder ( UUM-149240 ) 6000.3.0a1: Crash on PVRAtlassingData::Build and memory leak when switching Lighting Visualization overlay to \"Preview\" ( UUM-149471 ) Asset Importers: Editor crashes on \"(Unity) WriteObjectToVector\" when entering",
+  "system_assessment": {
+    "categories": [
+      "documentation"
+    ],
+    "severity": "info",
+    "reason": "No Phase 2 rule keyword matched."
+  },
+  "environment_impact": {
+    "level": "likely",
+    "reason": "This release is in Unity 6000.3; an active configured editor is in the same release stream."
+  }
+}
