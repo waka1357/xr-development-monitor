@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_3_23f1-225a9913cf00",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_3_23f1",
+  "source_name": "Unity Editor Release Notes 6000.3.23f1",
+  "detected_at": "2026-08-27T07:55:15.709645Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.3.23f1",
+  "content_hash": "225a9913cf00a9bf1b0147a0169648eb8fc02edf8169705a63766d8d75533b82",
+  "official_content": "Unity 6000.3.23f1 Released on Aug 26, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … port to reserve capacity of PersistentManager.Remapper in Memory Settings (Main Allocators > Other Allocators > Remapper Initial Capacity). (UUM-136275) DX12: Fixed an issue where VRAM used by small textures wasn't released back to the GPU driver after the textures were destroyed when using the Direct3D12 graphics API on Windows. You can now tune the small-texture heap",
+  "system_assessment": {
+    "categories": [
+      "documentation"
+    ],
+    "severity": "info",
+    "reason": "No Phase 2 rule keyword matched."
+  },
+  "environment_impact": {
+    "level": "likely",
+    "reason": "This release is in Unity 6000.3; an active configured editor is in the same release stream."
+  }
+}

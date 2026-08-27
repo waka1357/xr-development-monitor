@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_5_10f1-0ed71dc237ff",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_5_10f1",
+  "source_name": "Unity Editor Release Notes 6000.5.10f1",
+  "detected_at": "2026-08-27T07:55:16.918340Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.5.10f1",
+  "content_hash": "0ed71dc237ff1bd7199f81bf54f82c380a8898eaa647a59b74926e0c16bdf18d",
+  "official_content": "Unity 6000.5.10f1 Released on Aug 26, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … hes render as dots. ( UUM-135766 ) Package changes in 6000.5.10f1 Packages updated com.unity.services.authentication: 3.7.3 to 3.7.4 com.unity.timeline: 1.8.12 to 1.8.13 com.unity.xr.management: 4.5.4 to 4.6.1 Changeset Changeset: 3bd4f66ad299 Third Party Notices Third Party Notices For more information please see our Open Source Software Licences FAQ on the Unity Supp",
+  "system_assessment": {
+    "categories": [
+      "documentation"
+    ],
+    "severity": "info",
+    "reason": "No Phase 2 rule keyword matched."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}
