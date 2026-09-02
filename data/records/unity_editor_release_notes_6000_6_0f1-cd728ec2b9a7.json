@@ -1,0 +1,23 @@
+{
+  "id": "unity_editor_release_notes_6000_6_0f1-cd728ec2b9a7",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_6_0f1",
+  "source_name": "Unity Editor Release Notes 6000.6.0f1",
+  "detected_at": "2026-09-02T03:16:52.029073Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.6.0f1",
+  "content_hash": "cd728ec2b9a79c043d432620ad6962bb212a975d01d034349ba1c160060565d4",
+  "official_content": "Unity 6000.6.0f1 Released on Aug 31, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … . Core: Added Dictionary serialization and authoring in the Inspector with sort-by-key and duplicate-key detection. Documentation: Added a step in the UDP docs pipeline to resolve xref links in engine documentation. Editor: Added a new expression node to simplify inlining mathematical statements. Editor: Added a new shortcut to toggle Gizmos in the Scene view. Editor: A",
+  "system_assessment": {
+    "categories": [
+      "breaking_change",
+      "deprecation",
+      "security"
+    ],
+    "severity": "high",
+    "reason": "Matched configured Phase 2 keyword rules."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}
