@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_0_83f1-17dedb396bd3",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_0_83f1",
+  "source_name": "Unity Editor Release Notes 6000.0.83f1",
+  "detected_at": "2026-09-03T03:18:46.828200Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.0.83f1",
+  "content_hash": "17dedb396bd3d6ab3132aff0a235f7605fb93eaabef5f5eebc144b25c08b17ec",
+  "official_content": "Unity 6000.0.83f1 Released on Sep 2, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … lue of 'PlayerSettings.vulkanNumSwapchainBuffers' and instead use a fixed count of 3 swapchain buffers. (UUM-148724) Graphics: Fixed incorrect mipmap level calculations when using XR with \"Minimize Unity 'Screen' Size\" optimization. The camera rect in XR now correctly returns single-eye dimensions instead of combined stereo dimensions on SRP. This affects any system tha",
+  "system_assessment": {
+    "categories": [
+      "documentation"
+    ],
+    "severity": "info",
+    "reason": "No Phase 2 rule keyword matched."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}
