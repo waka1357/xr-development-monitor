@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_3_24f1-f1d874eabcab",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_3_24f1",
+  "source_name": "Unity Editor Release Notes 6000.3.24f1",
+  "detected_at": "2026-09-11T03:24:14.679994Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.3.24f1",
+  "content_hash": "f1d874eabcab51161d6606d79ea6cbd37d21c245f452a5458e7efac338f6a13b",
+  "official_content": "Unity 6000.3.24f1 Released on Sep 10, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … UUM-113848]( https://jira.unity3d.com/browse/UUM-113848\\)\\ ). ( UUM-113848 ) Editor: Search : Fixed \"Non-matching Profiler.EndSample\" error is thrown for \"SearchImporter.IndexingRequest\" when creating a script with Edit Mode Profiler recording enabled. ( UUM-143780 ) EmbeddedLinux: Fixed case where first touch input is dropped. (UUM-150086) Graphics: Fixed a crash when",
+  "system_assessment": {
+    "categories": [
+      "documentation"
+    ],
+    "severity": "info",
+    "reason": "No Phase 2 rule keyword matched."
+  },
+  "environment_impact": {
+    "level": "likely",
+    "reason": "This release is in Unity 6000.3; an active configured editor is in the same release stream."
+  }
+}
