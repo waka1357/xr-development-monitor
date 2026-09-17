@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_0_84f1-c1f802dda4da",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_0_84f1",
+  "source_name": "Unity Editor Release Notes 6000.0.84f1",
+  "detected_at": "2026-09-17T03:47:51.987678Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.0.84f1",
+  "content_hash": "c1f802dda4da6277180f6ecdd710b917116b6e0f70c2300ba883703931b89d24",
+  "official_content": "Unity 6000.0.84f1 Released on Sep 16, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … . ( UUM-151058 ) Web: Fixed NameFilesAsHashes functionality. (UUM-148663) WebGL: Fixed error if shader expects a cube texture but a texture wasn't explicitly bound. ( UUM-150746 ) XR: Fixed blocky or shifted lighting artifacts that could appear on XR platforms especially when using dynamic resolution in Deferred or Forward+ rendering paths. (UUM-143709) XR: Fixed case",
+  "system_assessment": {
+    "categories": [
+      "documentation"
+    ],
+    "severity": "info",
+    "reason": "No Phase 2 rule keyword matched."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_6_1f1-c2897d943b89",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_6_1f1",
+  "source_name": "Unity Editor Release Notes 6000.6.1f1",
+  "detected_at": "2026-09-17T03:47:51.542751Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.6.1f1",
+  "content_hash": "c2897d943b892f0e6791ba6623e185f7448e7a858263127f6a00919e3789e4c1",
+  "official_content": "Unity 6000.6.1f1 Released on Sep 16, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Bui … lls Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Accelerator (Windows) Accelerator (Mac) Accelerator (Linux) Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … hown when Bloom is active with 2D Renderer ( UUM-150232 ) 6000.3.13f1: Deadlock on exiting Play Mode when a Shader is destroyed while async shader compilation has queued variant requests for a different shader with Graphics Jobs enabled ( UUM-152966 ) 6000.6.0a2,6000.5.0b2: Resources.UnloadUnusedAssets() takes significantly longer to execute when run in a Player build (",
+  "system_assessment": {
+    "categories": [
+      "breaking_change"
+    ],
+    "severity": "high",
+    "reason": "Matched configured Phase 2 keyword rules."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}
