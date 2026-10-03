@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes-c669314970fd",
+  "kind": "changed",
+  "source_id": "unity_editor_release_notes",
+  "source_name": "Unity Editor Release Notes",
+  "detected_at": "2026-10-03T04:09:34.653010Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.4.3f1",
+  "content_hash": "c669314970fdea0af3e7d60ffca85a332699cbe497987483794c22723375fdef",
+  "official_content": "Unity 6000.4.3f1 Released on Apr 15, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Bui … ms Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … some T junctions. ( UUM-121344 ) URP: Fixed an issue where on-tile PostPro had a different result compared to traditional PostPro when Color Space was set to Gamma . (UUM-135686) XR: Fixed an issue when building and running Meta Quest applications with texture compression targeting enabled. ( UUM-131974 ) Package changes in 6000.4.3f1 Packages updated com.unity.recorder",
+  "system_assessment": {
+    "categories": [
+      "documentation"
+    ],
+    "severity": "info",
+    "reason": "No Phase 2 rule keyword matched."
+  },
+  "environment_impact": {
+    "level": "confirmed",
+    "reason": "Configured active Unity Editor version matches this release: 6000.4.3f1."
+  }
+}
