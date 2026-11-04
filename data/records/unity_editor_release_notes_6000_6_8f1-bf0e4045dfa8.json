@@ -1,0 +1,23 @@
+{
+  "id": "unity_editor_release_notes_6000_6_8f1-bf0e4045dfa8",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_6_8f1",
+  "source_name": "Unity Editor Release Notes 6000.6.8f1",
+  "detected_at": "2026-11-04T05:08:51.453361Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.6.8f1",
+  "content_hash": "bf0e4045dfa89cbd0afcde9fed09151ecabe4222816375cfe420512af2bc9755",
+  "official_content": "Unity 6000.6.8f1 Released on Nov 3, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Bui … ms Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … U crash or corrupted rendering with sorted Visual Effect Graph outputs when some instances of an effect were outside a camera's view, especially with several cameras. (UUM-149758) XR: Fixed SubsystemWithProvider.Start not throwing an ArgumentNullException when called after the subsystem was destroyed, which restarted the destroyed provider. ( UUM-151411 ) Package changes",
+  "system_assessment": {
+    "categories": [
+      "breaking_change",
+      "deprecation",
+      "security"
+    ],
+    "severity": "high",
+    "reason": "Matched configured Phase 2 keyword rules."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}

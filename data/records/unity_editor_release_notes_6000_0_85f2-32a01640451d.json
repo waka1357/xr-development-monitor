@@ -1,0 +1,21 @@
+{
+  "id": "unity_editor_release_notes_6000_0_85f2-32a01640451d",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_0_85f2",
+  "source_name": "Unity Editor Release Notes 6000.0.85f2",
+  "detected_at": "2026-11-04T05:08:51.227522Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.0.85f2",
+  "content_hash": "32a01640451da724c8352d93a8d72c0059d1fb6080da2a3ebd874a3b562bfe43",
+  "official_content": "Unity 6000.0.85f2 Released on Nov 3, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Bui … ms Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … 2D Renderer. ( UUM-148111 ) 2D: Fixed error message when entering fast playmode with Sprite Editor Window changes. ( UUM-146790 ) 2D: Fixed intermediate texture not created when requested by render pass. ( UUM-145892 ) 2D: Fixed LineRenderer not initializing correctly when toggling enable on game object. ( UUM-147747 ) 2D: Fixed the camera sorting layer texture resoluti",
+  "system_assessment": {
+    "categories": [
+      "security"
+    ],
+    "severity": "high",
+    "reason": "Matched configured Phase 2 keyword rules."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}
