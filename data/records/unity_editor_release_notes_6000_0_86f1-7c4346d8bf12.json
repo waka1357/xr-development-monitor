@@ -1,0 +1,22 @@
+{
+  "id": "unity_editor_release_notes_6000_0_86f1-7c4346d8bf12",
+  "kind": "initial",
+  "source_id": "unity_editor_release_notes_6000_0_86f1",
+  "source_name": "Unity Editor Release Notes 6000.0.86f1",
+  "detected_at": "2026-11-13T05:27:24.141890Z",
+  "source_url": "https://unity.com/releases/editor/whats-new/6000.0.86f1",
+  "content_hash": "7c4346d8bf12f031c53658fc3dca61c7c6bbc0e710c5981f166ce3eba66d2093",
+  "official_content": "Unity 6000.0.86f1 3-year LTS Released on Nov 12, 2026 Install Manual installs Component installers Release Third Party Notices Manual installs Operating systems Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedica … ms Linux macOS ARM64 macOS Windows ARM64 Windows Other installs Download Assistant (Windows) Download Assistant (Mac) Download Assistant (Linux) Shaders Component installers Linux Android Build Support iOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Dedicated Server Build Support Mac Build Support (Mono) Mac Dedicated Server Build Support Web Build Support Windows Build Support (Mono) Windows Dedicated Server Build Support Documentation macOS ARM64 Android Build Support iOS Build Support tvOS Build Support visionOS Build Support Linux Build Support (IL2CPP) Linux Bu … on Universal Windows Platform. (UUM-152563) Graphics: Fixed an assert \"Metal: memoryless texture requires 2D texture.\" that the Editor logged on Metal when it rendered single-pass XR to memoryless texture arrays. (UUM-154442) Graphics: Fixed an issue where a Line Renderer or Trail Renderer using a 2D sprite material became invisible after turning off Preview in the Animation window or after calling Renderer.SetPropertyBlock. ( UUM-156620 ) Graphics",
+  "system_assessment": {
+    "categories": [
+      "breaking_change",
+      "security"
+    ],
+    "severity": "high",
+    "reason": "Matched configured Phase 2 keyword rules."
+  },
+  "environment_impact": {
+    "level": "review",
+    "reason": "This release targets a different Unity release stream than the configured active editors; review it before planning an upgrade."
+  }
+}
